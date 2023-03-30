@@ -6,7 +6,28 @@ public:
 	string surname;
 	int age;
 	float avg_mark;
+
+	void clear(Student st) {
+		st.name = " no name";
+		st.surname = "no surname";
+		st.age = 0;
+		st.avg_mark = 10;
+	}
+
+	string convert() {
+		string msg= "";
+		msg += name;
+		msg += " " + surname;
+		msg += "(age = " + to_string(age);
+		msg += ", average mark = " + to_string(avg_mark);
+		msg += ")";
+	}
 };
+
+
+
+
+
 
 int main() {
 	Student st1;
@@ -19,29 +40,17 @@ int main() {
 	Student st2 = st1;
 
 	cout << "Before:" << endl;
-	cout << st1.name << endl;
-	cout << st1.surname << endl;
-	cout << st1.age << endl;
-	cout << st1.avg_mark << endl;
+	cout << st1.convert() << endl;
 
-	cout << st2.name << endl;
-	cout << st2.surname << endl;
-	cout << st2.age << endl;
-	cout << st2.avg_mark << endl;
+	
 
-	st1.avg_mark = 7;
+	st1.clear();
 
 
 	cout << "\nAfter:" << endl;
-	cout << st1.name << endl;
-	cout << st1.surname << endl;
-	cout << st1.age << endl;
-	cout << st1.avg_mark << endl;
+	cout << st1.convert() << endl;
 
-	cout << st2.name << endl;
-	cout << st2.surname << endl;
-	cout << st2.age << endl;
-	cout << st2.avg_mark << endl;
+	
 
 
 
