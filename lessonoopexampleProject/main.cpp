@@ -2,6 +2,7 @@
 
 class Student {
 public:
+	
 	string name;
 	string surname;
 	int age;
@@ -9,6 +10,7 @@ public:
 
 
 	Student() {
+		cout << " default ctor" << endl;
 		name = "no name";
 		surname = "no surname";
 		age = 15;
@@ -16,6 +18,15 @@ public:
 
 	}
 
+
+	Student(string nm,string surnm,int a,float mark) {
+		cout << " default ctor" << endl;
+		name = nm;
+		surname = surnm;
+		age = a;
+		avg_mark = mark;
+
+	}
 
 	~Student() {
 		cout << "destructor" << endl;
@@ -45,14 +56,14 @@ public:
 
 
 
-
 int main() {
+	cout << st1. convert() << endl;
 	Student st1;
-	cout << st1.convert() << endl;
-	/*st1.name = "ivan";
+	Student st2("Ivan", "Ivanov", 14, 10);
+	st1.name = "ivan";
 	st1.surname = "ivanov";
 	st1.age = 13;
-	st1.avg_mark = 10;*/
+	st1.avg_mark = 10;
 
 
 	Student st2 = st1;
@@ -63,7 +74,7 @@ int main() {
 
 	
 
-	st1.clear();
+	/*st1.clear();*/
 
 
 	cout << "\nAfter:" << endl;
