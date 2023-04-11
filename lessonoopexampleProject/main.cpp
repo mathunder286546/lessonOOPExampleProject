@@ -2,7 +2,6 @@
 
 class Student {
 public:
-	
 	string name;
 	string surname;
 	int age;
@@ -28,11 +27,21 @@ public:
 
 	}
 
+	Student(Student &student) {
+		cout << "copy constructor" << endl;
+		name = student.name;
+		surname = student.surname;
+		age = student.age;
+		avg_mark = student.avg_mark;
+	}
+
+
 	~Student() {
 		cout << "destructor" << endl;
 
-
 	}
+
+	
 
 	void clear(Student st) {
 		
@@ -57,7 +66,6 @@ public:
 
 
 int main() {
-	cout << st1. convert() << endl;
 	Student st1;
 	Student st2("Ivan", "Ivanov", 14, 10);
 	st1.name = "ivan";
