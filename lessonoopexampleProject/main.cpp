@@ -7,7 +7,24 @@ public:
 	int age;
 	float avg_mark;
 
+
+	Student() {
+		name = "no name";
+		surname = "no surname";
+		age = 15;
+		avg_mark = 4;
+
+	}
+
+
+	~Student() {
+		cout << "destructor" << endl;
+
+
+	}
+
 	void clear(Student st) {
+		
 		st.name = " no name";
 		st.surname = "no surname";
 		st.age = 0;
@@ -31,16 +48,18 @@ public:
 
 int main() {
 	Student st1;
-	st1.name = "ivan";
+	cout << st1.convert() << endl;
+	/*st1.name = "ivan";
 	st1.surname = "ivanov";
 	st1.age = 13;
-	st1.avg_mark = 10;
+	st1.avg_mark = 10;*/
 
 
 	Student st2 = st1;
 
 	cout << "Before:" << endl;
 	cout << st1.convert() << endl;
+
 
 	
 
@@ -50,6 +69,7 @@ int main() {
 	cout << "\nAfter:" << endl;
 	cout << st1.convert() << endl;
 
+	
 	
 
 
